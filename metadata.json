@@ -1,0 +1,7 @@
+{
+  "name": "FreshiFy Intelligent Food Monitoring",
+  "description": "A real-time mobile solution for food spoilage detection, inventory management, and recipe generation, powered by Gemini.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
