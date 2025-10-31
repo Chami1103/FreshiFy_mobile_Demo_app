@@ -4,17 +4,40 @@
 
 # Run and deploy your AI Studio app
 
-This contains everything you need to run your app locally.
+# 🍎 FreshiFy Demo Template
 
-View your app in AI Studio: https://ai.studio/apps/drive/1HOMKzYekMIJ7NdlH5IyHOEWvzzcBEvbP
+**FreshiFy** is a modular demo project for real-time food freshness and spoilage detection using **AI (Image Classification)** and **IoT (Gas Sensor)**.  
+This template provides a ready-to-use environment combining **Flask APIs**, **TensorFlow models**, and **ESP32 sensor integration**, with data persistence handled by **MongoDB** or **SQLite**.
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 📘 Overview
 
+FreshiFy demonstrates how artificial intelligence and IoT can be integrated to detect food spoilage both visually and through gas sensors.  
+It includes:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- 🧠 **Image Freshness Detection** (TensorFlow)
+- 🌡️ **Gas Sensor Detection** (ESP32 + MQ-137)
+- ⚙️ **Flask-based Backends** for each service
+- 🗃️ **MongoDB or SQLite** persistence
+- 💻 **Tkinter Desktop GUI**
+- 🧩 **APIs for mobile/IoT integration**
+
+This template is perfect for **researchers**, **students**, and **developers** who want to build or extend smart food monitoring systems.
+
+---
+
+## 📦 Repository Components
+
+| Component | File | Description |
+|------------|------|-------------|
+| 🧠 **Image Detection Backend** | `image_freshify.py` | Flask API for classifying food images as *Fresh* or *Spoiled* using a trained MobileNetV2 model (`Fruit_Classifier.h5`). |
+| 🌡️ **Sensor Detection Backend** | `sensor_freshify.py` | Flask API for processing NH₃ and RGB readings from ESP32 sensors to estimate spoilage status. |
+| 🗃️ **Database Layer** | `DB_FreshiFy.py` | MongoDB abstraction for storing sensor readings, image results, notifications, and logs. |
+| 💻 **GUI Demo** | `main_App.py` | Simple Tkinter-based local desktop demo for fruit classification with CSV logging. |
+| ⚙️ **ESP32 Firmware** | `Arduino_Code.ino` | Firmware for ESP32 + MQ-137 + TCS230 to post live sensor data to the Flask API. |
+
+---
+
+## 🗂 Folder Structure
+
